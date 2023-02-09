@@ -4,14 +4,13 @@ module.exports = {
 	extends: [
 		'eslint:recommended',
 		'plugin:@typescript-eslint/recommended',
-		'plugin:svelte/recommended',
 		'airbnb-base',
 		'airbnb-typescript/base',
+		'plugin:svelte/recommended',
 		'plugin:svelte/prettier',
 		'plugin:prettier/recommended',
 	],
-	plugins: ['@typescript-eslint'],
-	ignorePatterns: ['*.cjs'],
+	plugins: ['@typescript-eslint', 'import'],
 	overrides: [
 		{
 			files: ['*.svelte'],
@@ -33,7 +32,17 @@ module.exports = {
 		node: true,
 	},
 	rules: {
+		'arrow-body-style': ['error', 'as-needed'],
+		'prefer-arrow-callback': ['error', { allowNamedFunctions: false }],
 		'import/no-extraneous-dependencies': 0,
-		'import/no-unresolved': 0,
+		'@typescript-eslint/semi': 0,
+	},
+	settings: {
+		'import/resolver': {
+			typescript: {
+				alwaysTryTypes: true,
+				project: 'tsconfig.json',
+			},
+		},
 	},
 }

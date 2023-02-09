@@ -1,7 +1,4 @@
 <script lang="ts">
-	const test = 'bacon'
-	const item = new Object()
-	const itemHeight = (item) => (item.height <= 256 ? item.largeSize : item.smallSize)
 </script>
 
 <h1>Welcome to SvelteKit</h1>
