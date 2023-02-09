@@ -1,5 +1,5 @@
 <script lang="ts">
-	let test = 'bacon'
+	const test = 'bacon'
 	const item = new Object()
 	const itemHeight = (item) => (item.height <= 256 ? item.largeSize : item.smallSize)
 </script>
