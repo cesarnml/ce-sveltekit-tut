@@ -31,12 +31,6 @@ module.exports = {
 		es2017: true,
 		node: true,
 	},
-	rules: {
-		'arrow-body-style': ['error', 'as-needed'],
-		'prefer-arrow-callback': ['error', { allowNamedFunctions: false }],
-		'import/no-extraneous-dependencies': 0,
-		'@typescript-eslint/semi': 0,
-	},
 	settings: {
 		'import/resolver': {
 			typescript: {
@@ -44,5 +38,15 @@ module.exports = {
 				project: 'tsconfig.json',
 			},
 		},
+	},
+	rules: {
+		'arrow-body-style': ['error', 'as-needed'],
+		'prefer-arrow-callback': ['error', { allowNamedFunctions: false }],
+		'import/no-extraneous-dependencies': 0,
+		'@typescript-eslint/semi': 0,
+		'import/prefer-default-export': 0,
+		'import/no-mutable-exports': 0,
+		'import/extensions': 0,
+		'import/no-unresolved': 0,
 	},
 }
